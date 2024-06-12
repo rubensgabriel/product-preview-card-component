@@ -31,6 +31,7 @@ main {
     background-color: var(--white);
     overflow: hidden;
     padding-right: 10px;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.103);
 }
 
 #image {
@@ -126,11 +127,8 @@ footer a {
 }
 
 @media (max-width: 650px) {
-    body {
-        height: 110vh;
-    }
-
     main {
+        margin-top: 20px;
         flex-direction: column;
         max-width: 360px;
         padding-right: 0px;
@@ -146,19 +144,20 @@ footer a {
     }
 
     h1 {
-        font-size: 2.1em;
+        font-size: 1.9em;
     }
 
     footer {
         position: absolute;
-        bottom: -110px;
+        bottom: -70px;
         margin-bottom: 10px;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 375px) {
     main {
-        border-radius: 0;
-        margin-top: 0;
+        margin: 20px 10px 0px ;
+        margin-bottom: 0;
+        
     }
 }
