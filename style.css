@@ -1,0 +1,164 @@
+:root {
+/*Primary*/
+
+--darkCyan: hsl(158, 36%, 37%);
+--cream: hsl(30, 38%, 92%);
+
+/*Neutral*/
+
+--veryDarkBlue: hsl(212, 21%, 14%);
+--darkGrayishBlue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    max-width: 650px;
+    margin: auto;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: var(--white);
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+#image {
+    width: 20em;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher a div */
+    display: block; /* Remove espaços em branco ao redor da imagem */
+    content: url('images/image-product-desktop.jpg');
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 30px;
+}
+
+#description {
+    letter-spacing: .5em;
+    color: var(--darkGrayishBlue);
+}
+
+h1 {
+    font-size: 2.4em;
+    margin: 10px 10px 10px 0;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    line-height: 1.1em;
+    color: var(--veryDarkBlue);
+}
+
+p {
+    color: var(--darkGrayishBlue);
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#values {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+#values strong {
+    font-family: 'Fraunces', serif;
+    color: var(--darkCyan);
+    font-size: 2em;
+    font-weight: 900;
+}
+
+#values span {
+    text-decoration: line-through;
+    color: var(--darkGrayishBlue);
+    font-weight: 500;
+} 
+
+button {
+    background-color: var(--darkCyan);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 18px;
+    font-family: 'Montserrat', 'sans serif';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .4s all ease-in-out;
+}
+
+button:hover {
+    background-color: var(--veryDarkBlue);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+}
+
+footer a {
+    color: var(--darkCyan);
+    font-weight: 600;
+}
+
+@media (max-width: 650px) {
+    body {
+        height: 110vh;
+    }
+
+    main {
+        flex-direction: column;
+        max-width: 360px;
+        padding-right: 0px;
+    }
+
+    #image {
+        width: 100%;
+        content: url('images/image-product-mobile.jpg');
+    }
+
+    #content {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2.1em;
+    }
+
+    footer {
+        position: absolute;
+        bottom: -110px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    main {
+        border-radius: 0;
+        margin-top: 0;
+    }
+}
